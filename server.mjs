@@ -1,39 +1,32 @@
 import express from "express";
-import cheerio from "cheerio";
-import axios from "axios";
 import http from "http";
+import path from "path";
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const app = express();
 const server = http.createServer(app);
 const port = process.env.PORT || 3000;
 import cors from "cors";
+import * as lib from "./lib/lib.mjs";
+
+// Middleware
 app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(__dirname + "/public"));
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "public/views/"));
 
-const url = "https://www.theguardian.com/uk";
+// Routes
 
-app.get("/", function (req, res) {
-	res.json("This is my webscraper");
+app.get("/", (req, res) => {
+	res.sendFile(__dirname + "/public/html/index.html");
 });
 
-//app.get('/results', (req, res) => {
-axios(url)
-	.then((response) => {
-		const html = response.data;
-		const $ = cheerio.load(html);
-		const articles = [];
-
-		$(".fc-item__title", html).each(function () {
-			const title = $(this).text();
-			const url = $(this).find("a").attr("href");
-			articles.push({
-				title,
-				url,
-			});
-		});
-		//res.json(articles);
-	})
-	.catch((err) => console.log(err));
-
-//})
+app.get("/substition", async (req, res) => {
+	res.render(__dirname + "/public/views/substitionplan.ejs", { data: JSON.stringify(await lib.gatherData()) });
+});
 
 server.listen(port, () => {
 	console.log(`app listening at Port: ${port}`);

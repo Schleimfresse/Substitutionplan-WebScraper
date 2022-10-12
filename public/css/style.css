@@ -1,0 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat");
+* {
+    --bg: #181818;
+    background-color: var(--bg);
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+}
