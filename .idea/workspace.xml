@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73068038-bd9f-4985-ac80-cfb1b265d333" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/example.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/lib.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/lib.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/html/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/substitionplan.ejs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/server.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +31,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "D:/Substitutionplan - WebScraper",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -42,6 +44,7 @@
       <option name="presentableId" value="Default" />
       <updated>1665422140363</updated>
       <workItem from="1665422142258" duration="65000" />
+      <workItem from="1665677628787" duration="13000" />
     </task>
     <servers />
   </component>

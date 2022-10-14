@@ -20,12 +20,8 @@ app.set("views", path.join(__dirname, "public/views/"));
 
 // Routes
 
-app.get("/", (req, res) => {
-	res.sendFile(__dirname + "/public/html/index.html");
-});
-
-app.get("/substition", async (req, res) => {
-	res.render(__dirname + "/public/views/substitionplan.ejs", { data: JSON.stringify(await lib.gatherData()) });
+app.get("/", async (req, res) => {
+	res.render(__dirname + "/public/views/index.ejs", { data: JSON.stringify(await lib.gatherData()) });
 });
 
 server.listen(port, () => {
